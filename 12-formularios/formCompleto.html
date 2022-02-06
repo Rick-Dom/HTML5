@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário completo</title>
+
+    <style>
+        b{
+            font-size: larger;
+        }
+        h1{
+            margin-top: 20px;
+        }
+
+        div{
+            background-color: cadetblue;
+            margin-left: 5%;
+            margin-right: 5%;
+        
+        }
+
+        fieldset{
+            margin-left: 50px ;
+            margin-right: 50px;
+            border: solid 2px black;
+            border-radius: 15px; 
+            padding: 7px;
+        }
+    </style>
+</head>
+<body>
+
+    <!--vamos montar o formulário completo sem cola e organizado-->
+    <div>
+        <h1><center>Formulário</center></h1>
+
+        <form method="POST" action="processa.php">
+        <fieldset>
+            <!--inout texte-->
+           <b>Nome:</b><br>
+           <input type="text" name="nome" placeholder="informe seu nome" autofocus required>
+           <br><br> 
+
+           <!--input senha-->
+           <b>Senha:</b><br>
+           <input type="password" name="senha" maxlength="8" placeholder="Infrome sua senha" required autocomplete="off">
+           <br><br>
+
+           <!--input email-->
+           <b>Email:</b><br>
+           <input type="email" name="email" placeholder="Informe seu email" required autocomplete="on">
+           <br><br>
+
+           <!--input arquivo-->
+           <b>Escolha uma imagem</b><br>
+           <input type="file" name="imagem">
+           <br><br>
+
+           <!--input data-->
+           <b>Informe uma data</b><br>
+           <input type="date" name="data" min="2022-01-01" max="2022-12-31">
+           <br><br>
+
+           <!--input hora-->
+           <b>Informe um horario</b><br>
+           <input type="time" name="hora">
+           <br><br>
+
+           <!--input mes e ano-->
+           <b>Informe um mes e ano</b><br>
+           <input type="month" name="mes-ano" min="2020-01-01" max="2022-12-31">
+           <br><br>
+
+           <!--input semana -->
+           <b>Informe uma semana</b><br>
+           <input type="week" name="semana"  min="2022-01-01" max="2022-12-31">
+           <br><br>
+
+           <!--input data e hora-->
+           <b>Informe uma data e hora</b><br>
+           <input type="datetime-local" name="data-hora"  min="2022-01-01" max="2022-12-31">
+           <br><br>
+
+           <!--are de texto-->
+           <b>Deixe uma mensagem</b><br>
+           <textarea name="mensagem" rows="5" cols="30"></textarea>
+           <br><br>
+
+           <!--botao-->
+           <button type="button" name="botao">Clique aqui</button>
+           <br><br>
+
+           <!--select-->
+           <b>Escolha seu veiculo</b><br>
+           <select name="veiculo" id="">
+                <optgroup label="carros">
+                     <option value="camaro">Camaro</option>
+                     <option value="mustang">Mutang</option>
+                 </optgroup>
+                 <optgroup label="motos">
+                     <option value="hoernet">Hornet</option>
+                     <option value="Motocross">Moto cross</option>
+                 </optgroup>
+           </select>
+           <br><br>
+
+           <!--input url-->
+           <b>Colque uma url</b><br>
+           <input type="url" name="url">
+           <br><br>
+
+           <!--datalist-->
+           <b>Informe um curso</b><br>
+           <input name="cursos" list="lista-cursos">
+           <datalist id="lista-cursos">
+               <option value="HTML"></option>
+               <option value="CSS3"></option>
+               <option value="JS"></option>
+               <option value="PHP"></option>
+           </datalist>
+           <br><br>
+
+           <!--input pesquisa-->
+           <b>Pesquise aqui</b><br>
+           <input type="search" name="pesquisa">
+           <br><br>
+
+           <!--input teelefome-->
+           <b>informe seu telefone</b><br>
+           <input type="tel" name="telefone" required>
+           <br><br>
+
+           <!--input radio-->
+           <b>Qual time voce torce</b><br>
+           <input type="radio" name="time" value="Corinthians">Corinthians<br>
+           <input type="radio" name="time" value="Palmeiras">Palmeiras<br>
+           <input type="radio" name="time" value="São Paulo">São Paulo<br>
+           <input type="radio" name="time" value="outro">outro
+           <br><br>
+
+           <!--input checkbox-->
+           <b>Quais tecnilogias voce domina</b><br>
+           <input type="checkbox" name="tecnologia" value="js">JS<br>
+           <input type="checkbox" name="tecnologia" value="css">CSS<br>
+           <input type="checkbox" name="tecnologia" value="php">PHP<br>
+           <input type="checkbox" name="tecnologia" value="outras">outras<br>
+
+           <!--input numemro-->
+           <b>Informe uma quantidade</b><br>
+           <input type="number" min="0" max="50" step="2" name="num">
+           <br><br>
+
+           <!--input color-->
+           <b>Informe uma cor</b><br>
+           <input type="color" name="cor">
+           <br><br>
+
+           <!--input range-->
+           <b>qual seu nivel de satisfação?</b><br>
+           <input type="range" name="safisfacao">
+           <br><br>
+
+           <!--iput submit para enviar -->
+           <input type="submit" value="enviar" name="btn-enviar">
+           <br><br>
+
+        </fieldset>
+    </form>
+    </div>
+
+</body>
+</html>

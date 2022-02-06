@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+
+    <style>
+        table, th, td {border: 1px solid #000}
+        th, td {padding: 7px;}
+        .nome{background-color:rgb(102, 238, 102);}
+        .email{background-color: rgb(236, 116, 116);} 
+        .telefone{background-color: rgb(238, 213, 102);}
+        .cargo{background-color: rgb(126, 118, 238);;}
+
+    </style>
+    
+
+</head>
+<body>
+    <h1>Tabelas</h1>
+
+    <!--
+        uma tabla é contituida por linhas e colunas
+        <tr> para linhas
+        <th> para titulo da coluna
+        <td> para conteudo 
+
+
+        usamos o colspan para ocupar colunas
+        usamos o rowspan para ocupar linhas
+
+        podemos tambem organizar nossa tabela por seções.
+        <thead> para cabeçalho/nome das colunas
+        <tbody> para as linas, onde estao as informações
+        <tfoot> para rodapé
+    -->
+
+    <!--para criar a tabela-->
+    <table>
+
+        <!--para criar uma legenda-->
+        <caption>
+            Cadastro de clientes
+        </caption>
+
+        <!--temos um recurso que serve para criar um grupo de colunas e
+        formata-las individualmente-->
+
+        <colgroup>
+            <col class="nome">
+            <col class="email">
+            <col class="telefone">
+            <col class="cargo">
+        </colgroup>
+
+        <!--aqui temos a primeira linhas com as tres colunas com o nome dos campos-->
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Telefone</th>
+            <th>Cargo</th>
+        </tr>
+    </thead>
+
+        <!--segunda linha com as informações aqui vemos o exemplo do rowspan-->
+    <tbody>
+        <tr>
+            <td>Rodrigo</td>
+            <td>Rick@email.com</td>
+            <td>298271903</td>
+            <td rowspan="2">Desenvolvedor</td>
+        </tr>
+    
+        <tr>
+            <td>Ronaldo</td>
+            <td>Ronaldo@email.com</td>
+            <td>232123341</td>
+        </tr>
+    </tbody>
+        <!--aqui temos um atributo que faz com que a informação ocupe todo
+        o espaço que sobrou -->
+    <tfoot>
+        <tr>
+            <td  colspan="4"><center>Total: 2</center></td>
+        </tr>
+    </tfoot>
+     
+    </table>
+    
+</body>
+</html>

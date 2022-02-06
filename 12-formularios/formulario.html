@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Curso de HTML5 - criando o primeiro formulario">
+    <meta name="keywords" content="HTML5, formulario, CSS">
+    <meta name="author" content="Rick Domingues">
+    <title>Formulario</title>
+</head>
+<body>
+
+    <!--ONS VAMOS USAR ESSE ARQUIVOS EM MUITAS AULAS-->
+
+    <!--
+         ----------AULA 15-----------
+         criamos o formulario com a tag form e logo
+         de cara usamos alguns atributos sendo o primeiro deles
+         e o mais importante o action que informa a página que vai
+         receber nossas informações juntamente com o metodo que ja sabemos a 
+         diferença
+
+         Temos o metodo POST e o GET, o post de certa forma é mais seguro
+         pois as infotmações nao aparecem na URL diferente do outro metodo
+   
+        ----------AULA 16 REQUIRED, AUTOFOCUS, DISABLED----------
+        para ser obrigatorio usamos o required
+        para focar um campo usamos o autofocus
+        e para desabilita-lo usamos o disabled
+
+        ----------AULA 17 INPUT TYPES: EMAIL, RADIO, CHECKBOX----------
+        faltou virmos o atributos maxlength que indica o maximo de caracteres que o 
+        campo aceita
+
+        para um campo kja ficar marcado usamos o atributo checked
+  
+        ----------AULA 18 INPUT TYPES: NUMBER, RANGE, COLOR----------
+        com o input number podemos definir um valor minimo com min e maximo com max
+        Também podemos colocar um intervalo com o atributo step, ou seja, só aceita valores de 
+        10 em 10 por exemplo
+
+        o campo de tipo range é de entrada tbm, mas utilizamos um slider para 
+        indicar o valor, também podemos definir um valor minimo, maximo e de intervalo
+
+        ----------AULA 19 AUTOCOMPLETE E PLACEHOLDER----------
+        Podemos deixar ou nao que o campo se complete sozinho com o atributo
+        autocomplete="on/off"
+
+        e para que uma mensagem apareça dentro do espaço usamos o placeholder
+
+        ----------AULA 20 INPUT TYPES FILE. HIDDEN, SEARCH, URL, TRL----------
+        no input file, a parte de validação que vai tratar esse arquivo e que vai ser
+        armazenado em uma parta vai ser feito na parte da programação
+
+        o hidden serve para passar alguns parametros quando estamos na parte de programação 
+
+        ----------AULA 21 INPUT TYPES date, time, month, week, datetime local----------
+        da memsa forma que o number, podemos colocar uma data minima e uma maxima
+
+        ----------AULA 22 TEXTAREA, SPELLCHECK, BUTTON----------
+        o spellcheck é um atributo que permite desativar o corretor automatico
+        spellcheck="false"
+
+        a diferença entre o button e o input type submit é que no button podemos colocar 
+        conteudo dentro 
+
+        ----------AULA 23 Select, optgroup----------
+        nessa aula vimos o select e como funciona. podemos seprara os elemetos por grupos usando o 
+        optgroup, e para deixa um valor ja padrãio usamos o selected
+    
+        ----------AULA 24 datalist----------
+        podemos criar um input e utilizar uma lista pré definida
+        nao precisamos fchar o option, e para vincular a lista ao input apenas colocamos
+        list="id"
+
+    
+    
+    
+    -->
+
+ <form action="cadastro.php" method="POST">
+
+    <!--podemos agrupar os campos e criar uma leganda usando a tag fildset-->
+    <fieldset> Inforações pessoais
+
+        <!--input padrao do tipo text-->
+        Nome:<br>
+        <input type="text" name="in-nome" required autofocus placeholder="Informe o seu nome"><br>
+
+        <!--input do tipo senha. O maxlenght-->
+        Senha:<br>
+        <input type="password" name="in-senha" maxlength="8" autocomplete="off"><br>
+
+        <!--input do tipo email-->
+        Email:<br>
+        <input type="email" name="in-email" autocomplete="on"><br><br>
+
+        <!--input do tipo file-->
+        Imagem:<br>
+        <input type="file" name="imagem"><br><br>
+
+        <!--input do tipo data-->
+        Data:<br>
+        <input type="date" name="data" min="2000-12-31" max="2023-12-31"><br><br>
+
+        <!--input do tipo-->
+        Hora:<br>
+        <input type="time" name="hora"><br><br>
+
+        <!--input do tipo mes/ano-->
+        Mês e ano:<br>
+        <input type="month" name="mes-e-ano"><br><br>
+
+        <!--input do tipo semana-->
+        Semana:<br>
+        <input type="week" name="semana"><br><br>
+
+        <!--input do tipo dia e hora-->
+        Data e hora:<br>
+        <input type="datetime-local" name="data-hora"><br><br>
+
+        <!--input do tipo hidden-->
+        <input type="hidden" name="id">
+
+        <!-- area de texto-->
+        Mensagem:<br>
+        <textarea name="mensagem" rows="5" cols="30"></textarea><br><br>
+
+        <!--botao-->
+        <button type="button">Clique-me</button><br><br>
+
+        <!--no select podemos seprar por grupos usando a tag optgroup-->
+        escolha seu veiculo:<br>
+        <select name="veiculo">
+        <optgroup label="Carros"></optgroup>
+            <option value="camaro">camaro</option>
+            <option value="hilux">Hiluz</option>
+        </optgroup>
+
+        <optgroup name="Motos">
+            <option value="pop100" selected>Pop 100</option>
+            <option value="zig-50">Zig-50</option>
+        </optgroup>
+        </select>
+        <br><br>
+
+        <!--input do tipo URL-->
+        URL:<br>
+        <input type="url" name="site"><br><br>
+
+        <!--input do tipo detalist-->
+        Escolha um curso:<br>
+        <input name="cursos" list="lista-cursos">
+        <datalist id="lista-cursos">
+            <!--note que aqui nao precisamos fechar o option-->
+            <option value="HTML">
+            <option value="CSS3">
+            <option value="PHP">
+        </datalist>
+        <br>
+        <br>
+
+        <!--input do tipo search-->
+        Search:<br>
+        <input type="search" name="pesquisa"><br<<br><br>
+
+        <!--input do tipo tel-->
+        telefone:<br>
+        <input type="tel" name="telefone"><br><br>
+
+        <!--testando o radio-->
+        Time:<br>
+        <input type="radio" name="time" value="vasco">Vasco<br>
+        <input type="radio" name="time" value="corinthians" checked>corinthians<br>
+        <input type="radio" name="time" value="palmeiras">palmeiras<br><br>
+
+        <!--testando o checkbox-->
+        <fieldset>
+        Cores:<br>
+        <input type="checkbox" name="cores" value="verde" checked>Verde<br>
+        <input type="checkbox" name="cores" value="amarelo">Amarelo<br>
+        <input type="checkbox" name="cores" value="azul">Azul<br><br>
+    </fieldset>
+        <!--input de numeros-->
+        Quantidade:<br>
+        <input type="number" name="quantidade" min="0" max="500" width="500" step="10"><br><br>
+
+        <!--input range-->
+        <input type="range" name="quant"><br><br>
+
+        <!--input color-->
+        Cor:<br>
+        <input type="color" name="cor"><br><br>
+
+        <!--botao de enviar-->
+        <input type="submit" name="btn-enviar" value="Enviar">
+    </fieldset>
+    
+</form>
+    
+</body>
+</html>

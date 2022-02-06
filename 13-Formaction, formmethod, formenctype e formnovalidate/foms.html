@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <!--
+        
+        Formaction, formmethod, formenctype e formnovalidate
+        nós temos o atributo action que serve para receber nossas informaçções
+        temos um botão, mas se quisessemos ter dois botoes para receber s dados em arquivos 
+        difentes, isso é possivel
+        Nós basicamente definmos tiretamente no botao o que definomos na tag form
+   
+        Mais uma coisinha, é que da mesma maneira que usamos o target nos links,para abrira um nova janela
+        target="_blank", também podemos fazer isso aqui com o atributo formtarget
+   
+    -->
+    
+    <form id="form-cadastro" method="POST" enctype="application/x-www-form-urlencoded" name="formulario-cadastro" >
+        Email:<br>
+        <input type="email" name="email" required>
+        <input type="submit" formtarget="_blank" name="cadastrar"formmethod="GET" formenctype="application/x-www-form-urlencoded" formaction="cadastrar.php" value="cadastrar">
+        <!-- para ir para enciar para outra pagina-->
+        <input type="submit" name="envia-por-email" formmethod="POST" formenctype="application/x-www-form-urlencoded" formaction="enviar-por-email.php" value="Enviar por Email" formnovalidate>
+    </form>
+    
+    <!--uma coisa legal é que podemos criar um input fora do forms
+    e para dizer que aquele input que esta fora pertence a aquele formulario, temos que definir
+    um id no form-->
+
+    Nome:<br>
+    <input type="text" name="nome" form="form-cadastro">
+
+
+</body>
+</html>
