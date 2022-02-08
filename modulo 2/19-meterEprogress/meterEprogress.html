@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>meter e progress</title>
+</head>
+<body>
+
+    <!--
+        meter = medidor
+        vai que voce quer representar um grafico de uso
+        de espaço em disco, o limite do uso de algum serviço
+
+        para representar uma barra de dowload, de processo, temos a tag process
+    -->
+
+    <meter min="0" low="3" optimum="6" high="8" max="10" value="2"></meter>
+    <br>
+    <!--podemos representar por porcentagem também-->
+    <meter value="0.5"></meter>
+    <br>
+    <!--barra de download mudamos a barrinha mexendo no value-->
+    <progress max="100" value="90"> </progress>
+
+</body>
+</html>
