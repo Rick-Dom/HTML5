@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa</title>
+</head>
+<body>
+
+    <!-- 
+        vamos trabalhar com imagens mapeadas
+
+        os mapas sao composto por areas, ou seja, a area que queremos
+        mapear para acressentar um link. temos as opções de area com diferenres
+        formatos citados logo abaixo
+
+        Para criar uma area retangular, vamos precisar de algumas coordenadas
+        e podemos ver isso no photoshop (vamos em janela e informações) com a ferramente de seleção
+        precismos da coordenada do ponto superior esquerdo e do canto inferior direito
+
+        para criar um circulo, precisamos da coordenad do ponto centrar do circulo e o raio
+
+        e para a poligonal é mais complicada. temos que pegar os pontos das extremidades no sentido horario
+    -->
+
+    <img src="heart.png" title="Coração" alt="coração" usemap="imagem-mapeada">
+
+    <!--obs nao esta funcionando-->
+    <map name="imagem-mapeada">
+        <area shape="rect" coords="141,91,316,354" href="">
+        <area shape="circle" coords="485,82, 35" href="">
+        <area shape="poly>" coords="150,382,316,380,231,448" href="">
+    </map>
+    
+</body>
+</html>
