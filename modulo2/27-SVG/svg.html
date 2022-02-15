@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG</title>
+    <style>
+        svg{
+            background-color: #ccc;
+        }
+
+        svg rect{
+            fill: blue;
+            stroke: red;
+            stroke-width: 5px;
+            opacity: 0.5;
+
+            }
+
+        svg circle{
+            fill: blue;
+            stroke: red;
+            stroke-width: 5px;
+            opacity: 0.5;
+
+            }
+
+        svg ellipse{
+            fill: blue;
+            stroke: red;
+            stroke-width: 5px;
+            opacity: 0.5;
+
+            }
+
+        svg text{
+            font-size: large; 
+            fill: red;    
+
+        }
+
+        svg line{
+            stroke: red; 
+            stroke-width: 5px; 
+
+        }
+
+        svg polyline{
+            stroke: red;
+            stroke-width: 5px;
+            fill: blue;
+            opacity: 0.5;
+        }
+
+        svg polygon{
+            stroke: red;
+            stroke-width: 5px;
+            fill: blue;
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!--
+      O svg é utilizado para definir graficos vetoriais para web.
+      Um svg tem uma serie de vantagens sobre o png e o jpeg
+      ele pode ser criado a partir de qualquer editir de texto, pode ser pesquisado
+      indexado, é escalavel e pode ser impresso em alta qualidade
+    -->
+
+
+    <svg width="300" height="160">
+        <!-- 
+            parte 1 da aula de svg, com o retangulo 
+            o x define a margem lateral esqueda e o y a superior
+            ja o atributo rx e ry serve para arredondra os cantos
+        -->
+        <rect width="280" height="130" x="10" y="10" rx="20" ry="20">    
+    </svg>
+    <br>
+
+    <svg width="300" height="160">
+        <!--
+        para o circulos precisamos das coordenadas x,y do centrto do circulo
+        e o raio
+        -->
+        <circle cx="225" cy="80" r="57">
+    </svg>
+    <br>
+
+    <svg width="300" height="160">
+        <!--
+            nas elipses também precismos das coordenadas x e y
+            do centro desse elipse
+        -->
+
+        <ellipse cx="150" cy="80" rx="110" ry="45">
+    </svg>
+    <br>
+
+    <svg width="300" height="160">
+        <!--
+            nas elipses também precismos das coordenadas x e y
+            do centro desse elipse
+        -->
+
+        <text x="78" y="80">Aprendando SVG</text>    
+    </svg>
+    <br>
+
+    <svg width="300" height="160">
+        <!--
+            podemos também colocar linhas usando coordenadas, lembrando que
+            conseguimos essas coordenadas no photoshop
+            pegmamos o inicio e o fim da linha
+        -->
+
+        <line x1="18" y1="16" x2="287" y2="138" >  
+    </svg>
+    <br>
+
+    <svg width="300" height="160">
+        <!--
+           uma polyline é uma linha com varioz pontos
+        -->
+
+        <polyline points="10,78 68,43 148,104 178,47 290,130">  
+    </svg>
+    <br>
+
+    <svg width="300" height="160">
+        <!--
+           uma polyline é uma linha com varioz pontos
+        -->
+
+        <polygon points="34,111 125,14 190,120" >  
+    </svg>
+    
+</body>
+</html>

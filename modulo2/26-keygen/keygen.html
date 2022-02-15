@@ -11,13 +11,15 @@
     <!--
         a tag keygen indica um campo gerador de chaves publico privadas
 
+        entao quando o formulario é enviado a chave privada é armazenada localmente e a publica vai para
+        o servidor
+
     -->
 
     <form method="GET" action="cadastro.php">
         Nome:<input type="text" name="nome"><br>
         chave: <keygen name="chave">
         <input type="submit" value="enviar">
-
     </form>
     
 </body>
